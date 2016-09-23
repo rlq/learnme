@@ -1,0 +1,34 @@
+<resources>
+
+
+    <declare-styleable name="SwipeTodoView">
+        <attr name="tic_centerBtnImage" format="reference"/>
+        <attr name="tic_centerBtnBg" format="reference"/>
+        <attr name="tic_leftBtnImage" format="reference"/>
+        <attr name="tic_rightBtnImage" format="reference"/>
+        <attr name="tic_leftBtnColor" format="color"/>
+        <attr name="tic_rightBtnColor" format="color"/>
+        <attr name="tic_leftBtnBgColor" format="color"/>
+        <attr name="tic_rightBtnBgColor" format="color"/>
+        <attr name="tic_content" format="string"/>
+        <attr name="tic_subContent" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="rainbowbar">
+        <attr name="rainbowbar_hspace" format="dimension"></attr>
+        <attr name="rainbowbar_vspace" format="dimension"></attr>
+        <attr name="rainbowbar_color" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleIndicator">
+        <attr name="pointMinSize" format="dimension" />
+        <attr name="pointMaxSize" format="dimension" />
+        <attr name="pointNormalColor" format="color|reference" />
+        <attr name="pointSelectedColor" format="color|reference" />
+    </declare-styleable>
+
+    <style name="MyTheme">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+        
+</resources>

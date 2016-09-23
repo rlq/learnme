@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical" >
+
+    <com.lq.ren.many.calendar.view.CombintionView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/combine">
+
+    </com.lq.ren.many.calendar.view.CombintionView>
+
+    <com.lq.ren.many.calendar.view.RainBarView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:rainbowbar_color="@android:color/holo_blue_bright"
+        app:rainbowbar_hspace="160dp"
+        app:rainbowbar_vspace="10dp"
+        >
+
+    </com.lq.ren.many.calendar.view.RainBarView>
+
+    <com.lq.ren.many.calendar.view.ListDeleteView
+        android:id="@+id/delete_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        >
+
+    </com.lq.ren.many.calendar.view.ListDeleteView>
+
+    <!-- 0919 LoadingView -->
+    <com.lq.ren.many.calendar.view.step19.LoadingView
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gps"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        />
+
+    <ImageView
+        android:id="@+id/roundIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        >
+
+    </ImageView>
+
+    <!--0909 maptofile addcount -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="addCount"
+        android:id="@+id/addCount"
+        android:layout_gravity="center_vertical" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="minusCount"
+        android:id="@+id/minusCount"
+        android:layout_gravity="center_vertical" />
+
+    <!--0922 Map -->
+    <!--<fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/> -->
+
+
+
+</LinearLayout>
