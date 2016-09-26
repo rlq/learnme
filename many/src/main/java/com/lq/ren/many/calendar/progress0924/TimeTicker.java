@@ -40,7 +40,7 @@ public class TimeTicker {
                 }
             }
         };
-        mTimer.scheduleAtFixedRate(mTask, 1, period);
+        mTimer.scheduleAtFixedRate(mTask, 1000, period); //每延迟1s 会
     }
 
     public void stop() {
