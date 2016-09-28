@@ -20,7 +20,7 @@
 
         <!-- custom -->
 
-        <activity android:name="com.lq.ren.many.CustomActivity">
+        <activity android:name="com.lq.ren.many.calendar.maptopoint.MapToPointActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
