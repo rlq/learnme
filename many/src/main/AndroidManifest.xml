@@ -18,9 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- custom -->
+        <!-- custom calendar.maptopoint.MapToPointActivity-->
 
-        <activity android:name="com.lq.ren.many.calendar.maptopoint.MapToPointActivity">
+        <activity android:name="com.lq.ren.many.CustomActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

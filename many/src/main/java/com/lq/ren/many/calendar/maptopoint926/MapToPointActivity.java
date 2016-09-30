@@ -1,4 +1,4 @@
-package com.lq.ren.many.calendar.maptopoint;
+package com.lq.ren.many.calendar.maptopoint926;
 
 import android.app.Activity;
 import android.graphics.PointF;
@@ -8,11 +8,8 @@ import android.util.Log;
 import com.lq.ren.many.R;
 import com.lq.ren.many.calendar.progress0924.TimeTicker;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
-import javax.security.auth.Destroyable;
 
 /**
  * Author lqren on 16/9/26.
