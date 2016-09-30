@@ -36,7 +36,7 @@ public class MapToPointActivity extends Activity {
     }
 
     private void addPoint(float x, float y) {
-        Log.v("HEHE", "point :" + x + ", " + y);
+       // Log.v("HEHE", "point :" + x + ", " + y);
         view.setPoint(x, y);
     }
 
@@ -55,14 +55,12 @@ public class MapToPointActivity extends Activity {
     };
 
     private float randomGenerated() {
-        return new Random().nextFloat() * 1000;
+        return new Random().nextFloat();
     }
 
     private void translatePoint() {
         float x = randomGenerated();
         float y = randomGenerated();
-
-
         addPoint(x, y);
     }
 

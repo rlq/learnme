@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-    <com.lq.ren.many.calendar.maptopoint.DrawMapPathView
+    <com.lq.ren.many.calendar.maptopoint926.DrawMapPathView
         android:id="@+id/maptopoint"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

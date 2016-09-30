@@ -3,37 +3,28 @@ package com.lq.ren.many;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.lq.ren.many.calendar.bdmap0923.MapImp;
 import com.lq.ren.many.calendar.hashmapstep7.MapToFile0909String;
-import com.lq.ren.many.calendar.hashmapstep7.SharedActivity;
 import com.lq.ren.many.calendar.view.CombintionView;
 import com.lq.ren.many.calendar.view.ListDeleteAdapter;
 import com.lq.ren.many.calendar.view.ListDeleteView;
-import com.lq.ren.many.calendar.view.step19.LoadingView;
+import com.lq.ren.many.calendar.matrix929.DynamicView928;
 import com.lq.ren.many.calendar.view.step5.RoundImage0905;
-import com.lq.ren.many.learn.course.Draw2Canvas;
 import com.lq.ren.many.learn.course.Draw4Shader;
 
 import java.text.SimpleDateFormat;
@@ -59,9 +50,9 @@ public class CustomActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.custom_customview);
+       // setContentView(R.layout.custom_customview);
 
-        initListView();
+        //initListView();
 
         /**DrawView */
         //initDrawView();
@@ -70,19 +61,19 @@ public class CustomActivity extends Activity {
         //testGps();
 
         /**0905 RoundView 圆角 */
-        step5SetRoundDrawable();
+        //step5SetRoundDrawable();
 
         /**0907 shared */
-        startActivity(new Intent(CustomActivity.this, SharedActivity.class));
+        //startActivity(new Intent(CustomActivity.this, SharedActivity.class));
 
         /**0909 file and hashMap */
-        mapToFileReadString();
+       // mapToFileReadString();
 
         /**0918 draw point */
         //setContentView(new Draw918(this));
 
         /**0919 calendar add */
-        calendar0919();
+       // calendar0919();
 
         /**0919 LoadingView */
         //setContentView(new LoadingView(this));
@@ -91,9 +82,8 @@ public class CustomActivity extends Activity {
 //        FrameLayout layout = (FrameLayout) findViewById(R.id.map);
 //        layout.addView(new MapImp().createFixMapView(this));
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        //0928 path
+        setContentView(new DynamicView928(this));
     }
 
     private void initListView() {
@@ -273,45 +263,7 @@ public class CustomActivity extends Activity {
         Log.v("HEHE", "format " + format.format(calendar.getTime()));
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Custom Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app URL is correct.
-                Uri.parse("android-app://com.lq.ren.many/http/host/path")
-        );
-        AppIndex.AppIndexApi.start(client, viewAction);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
-                Action.TYPE_VIEW, // TODO: choose an action type.
-                "Custom Page", // TODO: Define a title for the content shown.
-                // TODO: If you have web page content that matches this app activity's content,
-                // make sure this auto-generated web page URL is correct.
-                // Otherwise, set the URL to null.
-                Uri.parse("http://host/path"),
-                // TODO: Make sure this auto-generated app URL is correct.
-                Uri.parse("android-app://com.lq.ren.many/http/host/path")
-        );
-        AppIndex.AppIndexApi.end(client, viewAction);
-        client.disconnect();
-    }
 }
 
 

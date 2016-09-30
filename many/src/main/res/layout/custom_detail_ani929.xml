@@ -3,27 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/addAlarm"
+    <!--         style="@android:style/Widget.Material.Button.Borderless" -->
+
+    <ImageButton
+        android:id="@+id/image_avatar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_weight="0"
+        android:layout_gravity="center_horizontal|top"
+        android:contentDescription="@null"
+        android:src="@drawable/qq"
+        android:scaleType="centerInside"
+        android:transitionName="shared_avatar"
+        />
+
+    <TextView
+        android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:text="addAlarm"
-        android:onClick="setTime"
-        android:layout_alignParentStart="true" />
+        android:layout_weight="0"
+        android:layout_marginTop="4dp"
+        android:layout_gravity="center_horizontal"
+        android:singleLine="true"
+        android:textAppearance="?android:textAppearanceButton"
+        android:transitionName="shared_title"
+        tools:text="Abertam"
+        />
 
-    <include
-        layout="@layout/custom_alarmitem"/>
-    <!-- <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/addAlarm">
-    </ListView>
- -->
+
 </LinearLayout>

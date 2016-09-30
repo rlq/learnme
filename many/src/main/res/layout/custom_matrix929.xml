@@ -5,42 +5,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <!--0922 Map -->
-    <!--<fragment
-        android:id="@+id/map"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/> -->
-
-    <!--0923 baiduMap -->
+    <!--0929 matrix -->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/btn_clear"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1.0"
-            android:background="@color/colorPrimary"
-            android:text="清除(clear)" />
+            android:id="@+id/btn_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="缩放" />
 
         <Button
-            android:id="@+id/btn_reset"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1.0"
-            android:background="@color/colorAccent"
-            android:text="重置(reset)" />
+            android:id="@+id/btn_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="旋转" />
+
+        <Button
+            android:id="@+id/btn_translate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="平移" />
+
+        <Button
+            android:id="@+id/btn_skew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="倾斜" />
     </LinearLayout>
-
-    <com.baidu.mapapi.map.MapView
-        android:id="@+id/bmapView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clickable="true" />
-
+    <!-- 原始图片 -->
+    <ImageView
+        android:id="@+id/iv_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!-- 处理之后的图片 -->
+    <ImageView
+        android:id="@+id/iv_after"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
