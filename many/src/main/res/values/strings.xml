@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Many</string>
+
+        <string-array name="hobby">
+            <item>la</item>
+            <item>lb</item>
+            <item>lc</item>
+            <item>ld</item>
+            <item>le</item>
+            <item>lf</item>
+            <item>lg</item>
+            <item>lh</item>
+            <item>lj</item>
+            <item>lk</item>
+            <item>lm</item>
+            <item>ln</item>
+            <item>lo</item>
+            <item>lp</item>
+            <item>lq</item>
+        </string-array>
+
 </resources>

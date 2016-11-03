@@ -1,5 +1,6 @@
 package com.lq.ren.fitness;
 
+import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ import com.lq.ren.transitions.R;
 /**
  * Author lqren on 16/9/29.
  */
-public class ProgressActivity extends AppCompatActivity {
+public class ProgressActivity extends Activity {
 
     private CircularProgressView progressView;
     private TimeTicker timer;
@@ -38,11 +39,11 @@ public class ProgressActivity extends AppCompatActivity {
         icon = findViewById(R.id.item_icon);
         gps = (TextView) findViewById(R.id.item_gps);
         next = findViewById(R.id.item_next);
+        gps.setText("gps定位失败\n请重新连接");
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gps.setText("gps定位失败\n请重新连接");
                 openDetail();
             }
         });
@@ -50,11 +51,14 @@ public class ProgressActivity extends AppCompatActivity {
 
     private void openDetail() {
 
-        Intent intent = new Intent(ProgressActivity.this, ContentActivity.class);
+        Intent intent = new Intent(this, ContentActivity.class);
+        intent.putExtra(getString(R.string.transition_shared_avatar), 1);
+        intent.putExtra(getString(R.string.transition_shared_title), "gps定位失败\n" +
+                "请重新连接");
         ActivityOptions transitionActivity =
                 ActivityOptions.makeSceneTransitionAnimation(
                         this,
-                        Pair.create(icon, getString(R.string.transition_shared_avatar)),
+                        Pair.create(next, getString(R.string.transition_shared_avatar)),
                         Pair.create((View)gps, getString(R.string.transition_shared_title)));
 
         startActivity(intent, transitionActivity.toBundle());
@@ -76,7 +80,8 @@ public class ProgressActivity extends AppCompatActivity {
     }
 
     private void cancel() {
-        timer.stop();
+        if (timer != null)
+            timer.stop();
         timer = null;
         runnable = null;
     }
@@ -94,5 +99,12 @@ public class ProgressActivity extends AppCompatActivity {
             }
         }
     };
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        cancel();
+        finish();
+    }
 }
 

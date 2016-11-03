@@ -53,7 +53,7 @@ public class GridFragment extends Fragment implements OnClickListener {
 
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
-                .addSharedElement(holder.image, "kittenImage")
+                .addSharedElement(holder.image, getString(R.string.transition_shared_avatar))
                 .replace(R.id.container, kittenDetails)
                 .addToBackStack(null)
                 .commit();

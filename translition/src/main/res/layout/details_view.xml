@@ -12,7 +12,7 @@
         android:layout_height="@dimen/details_image_size"
         android:layout_marginTop="@dimen/details_top_spacing"
         android:scaleType="centerCrop"
-        android:transitionName="kittenImage"
+        android:transitionName="@string/transition_shared_avatar"
         tools:ignore="ContentDescription,UnusedAttribute" />
 
     <TextView
@@ -20,6 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/details_title_text"
+        android:transitionName="@string/transition_shared_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
 
     <TextView

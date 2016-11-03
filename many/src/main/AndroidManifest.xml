@@ -18,9 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- custom calendar.maptopoint.MapToPointActivity-->
-
-        <activity android:name="com.lq.ren.many.calendar.maptopoint926.MapToPointActivity">
+        <activity
+            android:name="com.lq.ren.many.learn.touchdoc1031.DispatchActivity"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,9 +28,12 @@
             </intent-filter>
         </activity>
 
+        <!-- custom calendar.maptopoint.MapToPointActivity-->
+
         <activity android:name="com.lq.ren.many.learn.alarm.RingAlarmActivity"/>
         <activity android:name="com.lq.ren.many.learn.alarm.TimeSetActivity"/>
         <activity android:name="com.lq.ren.many.learn.alarm.AlarmActivity"/>
+        <activity android:name=".calendar.indicator1019.GestureActivity"/>
 
         <!--<receiver
             android:name="com.he.custom.utils.Timesetting">

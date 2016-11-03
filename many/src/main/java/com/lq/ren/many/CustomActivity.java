@@ -20,16 +20,20 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.lq.ren.many.calendar.hashmapstep7.MapToFile0909String;
+import com.lq.ren.many.calendar.indicator1019.ActionView;
+import com.lq.ren.many.calendar.matrix929.Canvas1022;
+import com.lq.ren.many.calendar.matrix929.DynamicView928;
+import com.lq.ren.many.calendar.progress0924.GradientProgress;
 import com.lq.ren.many.calendar.view.CombintionView;
 import com.lq.ren.many.calendar.view.ListDeleteAdapter;
 import com.lq.ren.many.calendar.view.ListDeleteView;
-import com.lq.ren.many.calendar.matrix929.DynamicView928;
 import com.lq.ren.many.calendar.view.step5.RoundImage0905;
 import com.lq.ren.many.learn.course.Draw4Shader;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -50,7 +54,7 @@ public class CustomActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-       // setContentView(R.layout.custom_customview);
+        //setContentView(R.layout.custom_customview);
 
         //initListView();
 
@@ -83,7 +87,23 @@ public class CustomActivity extends Activity {
 //        layout.addView(new MapImp().createFixMapView(this));
 
         //0928 path
-        setContentView(new DynamicView928(this));
+        //setContentView();
+
+        //1010 date
+        Log.d("HEHE", "10/10 date: "+ getDate(10, 7));
+
+        //10.16
+        //startActivity(new Intent(this, GestureActivity.class));
+
+        //10.19
+        //setContentView(new ActionView(this));
+
+        //10.24
+        GradientProgress view = new GradientProgress(this);
+        view.setCurrentCount(50);
+        view.setMaxCount(100);
+        view.setScore(50);
+        setContentView(view);
     }
 
     private void initListView() {
@@ -261,6 +281,16 @@ public class CustomActivity extends Activity {
 
         SimpleDateFormat format = new SimpleDateFormat("yyyy MM dd");
         Log.v("HEHE", "format " + format.format(calendar.getTime()));
+    }
+
+    private Date getDate(int d, int h) {
+        Calendar calendar = Calendar.getInstance();
+        Log.v("HEHE", "10,10 now caledar: " + calendar);
+        Log.v("HEHE", "10,10 now: " + new Date(System.currentTimeMillis()));
+        calendar.set(Calendar.DAY_OF_MONTH, d);
+        calendar.set(Calendar.HOUR, h);
+        Log.v("HEHE", "10,10 caledar: " + calendar);
+        return new Date(calendar.getTimeInMillis());
     }
 
 

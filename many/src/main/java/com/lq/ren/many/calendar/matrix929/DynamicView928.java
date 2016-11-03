@@ -252,4 +252,127 @@ public class DynamicView928 extends View {
         path.lineTo(prevPoint.x, prevPoint.y);
         return path;
     }
+
+    /*
+    if (1 - pointF.get(pointF.size() - 1).x <= 0.15 ) {
+            if (1 - pointF.get(pointF.size() - 1).y <= 0.15 ) {
+                canvas.translate(10, 10);
+                Log.d("HEHE", "####translate :x->, y->:"  + pointF.get(pointF.size() - 1) );
+            } else if (pointF.get(pointF.size() - 1).y <= 0.15 ) {
+                canvas.translate(10, -10);
+                Log.i("HEHE", "####translate :x->, <-y:"  + pointF.get(pointF.size() - 1));
+            }
+        } else if (pointF.get(pointF.size() - 1).x <= 0.15 ) {
+            if (1 - pointF.get(pointF.size() - 1).y <= 0.15 ) {
+                canvas.translate(-10, 10);
+                Log.d("HEHE", "####translate : <-x, y->:"  + pointF.get(pointF.size() - 1) );
+            } else if (pointF.get(pointF.size() - 1).y <= 0.15 ) {
+                canvas.translate(-10, -10);
+                Log.i("HEHE", "####translate : <-x, <-y:"  + pointF.get(pointF.size() - 1) );
+            }
+        }
+
+        if (1 - pointF.get(0).x <= 0.15 ) {
+            if (1 - pointF.get(0).y <= 0.15 ) {
+                canvas.translate(-200, -200);
+                LogUtil.d("HEHE", "####translate :x->, y->:"  + pointF.get(0));
+            } else if (pointF.get(0).y <= 0.15 ) {
+                canvas.translate(-200, 200);
+                LogUtil.i("HEHE", "$$$$$$translate :x->, <-y:"  + pointF.get(0));
+            }
+        } else if (pointF.get(0).x <= 0.15 ) {
+            if (1 - pointF.get(0).y <= 0.15 ) {
+                canvas.translate(200, -200);
+                LogUtil.d("HEHE", "@@@@@translate : <-x, y->:"  + pointF.get(0));
+            } else if (pointF.get(0).y <= 0.15 ) {
+                canvas.translate(200, 200);
+                LogUtil.i("HEHE", "*****translate : <-x, <-y:"  + pointF.get(0));
+            }
+        }
+
+        MockSportLocationClient client;
+    private List<SportLocation> locations;
+    SportLocation location;
+
+
+    private void initMapData() {
+        client = new MockSportLocationClient();
+        locations = new ArrayList<>();
+        initPoints();
+    }
+
+    //得到起始点 ,然后生成下一个点 ----->/ 一下子生成100个点
+    private void initPoints() {
+        client.start();
+        location = new SportLocation(1000);
+        Random rand = new Random(0);
+        double startLat = client.getStartLat(rand);
+        double startLon = client.getStartLon(rand);
+        location.accuracy = 1;
+        location.latitude = startLat;
+        location.longitude = startLon;
+        //locations.add(location);
+        setLocationList(location);
+
+        //Log.d("HEHE", "location 0, x: " + locations.get(0).latitude + ", y: " + locations.get(0).longitude);
+
+        for (int i = 1; i < 100; i++) {
+            generateSportLocations();
+        }
+
+    }
+
+    // 每一秒生成一个点
+    private void generateSportLocations() {
+        int count = locations.size();
+        if (count >= 2) {
+            location = client.nextPoint(locations.get(count - 2), locations.get(count - 1));
+            //location = client.nextPoint(locations.get(0), locations.get(1));
+        } else {
+            location = client.nextPoint(locations.get(0), locations.get(0));
+        }
+        setLocationList(location);
+    }
+
+    private void setLocationList(SportLocation location) {
+        PathSmoother smoother = new PathSmoother();
+        SportLocation sportLocation = smoother.process(location);
+        locations.add(sportLocation);
+        locations.add(location);
+    }
+     */
+
+    /**
+       public static SportDataType[][] workingTypes = {
+            {SportDataType.Distance, SportDataType.HeartRate, SportDataType.Calorie, SportDataType.Speed, SportDataType.Pace},
+            {SportDataType.Distance, SportDataType.HeartRate, SportDataType.Calorie, SportDataType.Speed, SportDataType.Pace},
+            {SportDataType.Duration, SportDataType.HeartRate, SportDataType.Calorie, SportDataType.Speed, SportDataType.Pace},
+            {SportDataType.Duration, SportDataType.Distance, SportDataType.HeartRate, SportDataType.Speed, SportDataType.Pace},
+            };
+
+    public static SportData[][] getWorkingData(SportPoint data) {
+        SportTime time = new SportTime(data.time);
+        HeartRate heartRate = new HeartRate(data.time, SimpleData.DATA_ACCURACY_MEDIUM, (int) data.heart);
+        Distance distance = new Distance(data.time, SimpleData.DATA_ACCURACY_MEDIUM, (int) data.distance);
+        Calorie calorie = new Calorie(data.time, (float) data.distance);
+        Speed speed = new Speed(data.time, SimpleData.DATA_ACCURACY_MEDIUM, (float) data.distance / data.time);
+        Pace pace = new Pace(data.time, SimpleData.DATA_ACCURACY_MEDIUM, (float) data.distance / data.time);
+        SportData[][] obj =  {
+                {distance, heartRate, calorie, speed, pace},
+                {distance, heartRate, calorie, speed, pace},
+                {distance, heartRate, calorie, speed, pace},
+                {time, distance, heartRate, speed, pace},
+        };
+        return obj;
+    }
+
+    public static SportDataType[][] workingStepTypes = {
+            {SportDataType.Distance, SportDataType.HeartRate, SportDataType.Calorie, SportDataType.Speed, SportDataType.Pace, SportDataType.Steps},
+            {SportDataType.Distance, SportDataType.HeartRate, SportDataType.Calorie, SportDataType.Speed, SportDataType.Pace, SportDataType.Steps},
+            {SportDataType.Duration, SportDataType.HeartRate, SportDataType.Calorie, SportDataType.Speed, SportDataType.Pace, SportDataType.Steps},
+            {SportDataType.Duration, SportDataType.Distance,  SportDataType.Speed, SportDataType.Pace, SportDataType.Steps, SportDataType.Steps},
+            {SportDataType.Duration, SportDataType.Distance, SportDataType.HeartRate, SportDataType.Calorie, SportDataType.Speed, SportDataType.Pace},
+    };
+
+     */
 }

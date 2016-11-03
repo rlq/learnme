@@ -1,1 +1,1 @@
-include ':app', ':many', ':fragment'
+include ':app', ':many', ':translition', ':Core1009'
