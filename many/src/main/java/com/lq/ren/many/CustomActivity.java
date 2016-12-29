@@ -23,12 +23,15 @@ import com.lq.ren.many.calendar.hashmapstep7.MapToFile0909String;
 import com.lq.ren.many.calendar.indicator1019.ActionView;
 import com.lq.ren.many.calendar.matrix929.Canvas1022;
 import com.lq.ren.many.calendar.matrix929.DynamicView928;
+import com.lq.ren.many.calendar.path1205.PathView;
 import com.lq.ren.many.calendar.progress0924.GradientProgress;
 import com.lq.ren.many.calendar.view.CombintionView;
 import com.lq.ren.many.calendar.view.ListDeleteAdapter;
 import com.lq.ren.many.calendar.view.ListDeleteView;
 import com.lq.ren.many.calendar.view.step5.RoundImage0905;
+import com.lq.ren.many.learn.course.Draw1208Ripple;
 import com.lq.ren.many.learn.course.Draw4Shader;
+import com.lq.ren.many.learn.course.DrawVector1213;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -99,11 +102,20 @@ public class CustomActivity extends Activity {
         //setContentView(new ActionView(this));
 
         //10.24
-        GradientProgress view = new GradientProgress(this);
-        view.setCurrentCount(50);
-        view.setMaxCount(100);
-        view.setScore(50);
-        setContentView(view);
+//        GradientProgress view = new GradientProgress(this);
+//        view.setCurrentCount(50);
+//        view.setMaxCount(100);
+//        view.setScore(50);
+//        setContentView(view);
+
+        //12.05
+//        setContentView(new PathView(this));
+
+        //12.08
+//        setContentView(new Draw1208Ripple(this));
+
+        //12.13
+        setContentView(new DrawVector1213(this));
     }
 
     private void initListView() {

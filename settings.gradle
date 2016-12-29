@@ -1,1 +1,1 @@
-include ':app', ':many', ':translition', ':Core1009'
+include ':app', ':many'

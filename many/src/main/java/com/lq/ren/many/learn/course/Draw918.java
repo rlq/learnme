@@ -3,6 +3,8 @@ package com.lq.ren.many.learn.course;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.ColorFilter;
+import android.graphics.MaskFilter;
 import android.graphics.Paint;
 import android.graphics.PointF;
 import android.view.MotionEvent;
@@ -25,6 +27,13 @@ public class Draw918 extends View{
         mPaint.setStrokeCap(Paint.Cap.ROUND);
         mPaint.setStrokeJoin(Paint.Join.ROUND);
         mPaint.setStrokeWidth(3);
+        mPaint.setDither(true);
+        mPaint.setFilterBitmap(true);
+        mPaint.setMaskFilter(new MaskFilter());
+        mPaint.setColorFilter(new ColorFilter());
+        mPaint.setStrokeJoin(Paint.Join.MITER);
+        mPaint.setFakeBoldText(true);
+
     }
 
     @Override

@@ -19,7 +19,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="com.lq.ren.many.learn.touchdoc1031.DispatchActivity"
+            android:name="com.lq.ren.many.CustomActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
