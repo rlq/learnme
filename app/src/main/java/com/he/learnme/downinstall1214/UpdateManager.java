@@ -1,4 +1,4 @@
-package com.he.learnme.downinstall;
+package com.he.learnme.downinstall1214;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -18,7 +18,6 @@ import com.android.volley.toolbox.Volley;
 */
 import com.he.learnme.R;
 
-import android.R.integer;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.app.Dialog;

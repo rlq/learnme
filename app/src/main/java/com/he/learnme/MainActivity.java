@@ -1,11 +1,9 @@
 package com.he.learnme;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.he.learnme.downinstall.UpdateManager;
-import com.he.learnme.tts1201.TTS121Activity;
+import com.he.learnme.downinstall1214.UpdateManager;
 
 public class MainActivity extends AppCompatActivity {
 

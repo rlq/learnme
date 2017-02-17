@@ -2,7 +2,10 @@ package com.lq.ren.many;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,6 +14,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -20,18 +24,18 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.lq.ren.many.calendar.hashmapstep7.MapToFile0909String;
-import com.lq.ren.many.calendar.indicator1019.ActionView;
-import com.lq.ren.many.calendar.matrix929.Canvas1022;
-import com.lq.ren.many.calendar.matrix929.DynamicView928;
-import com.lq.ren.many.calendar.path1205.PathView;
-import com.lq.ren.many.calendar.progress0924.GradientProgress;
 import com.lq.ren.many.calendar.view.CombintionView;
 import com.lq.ren.many.calendar.view.ListDeleteAdapter;
 import com.lq.ren.many.calendar.view.ListDeleteView;
+import com.lq.ren.many.calendar.view.jan_17.CustomTrigon0119;
+import com.lq.ren.many.calendar.view.jan_17.HeartRateView;
+import com.lq.ren.many.calendar.view.jan_17.PercentView0106;
+import com.lq.ren.many.calendar.view.jan_17.RoundedSquareImage0113;
+import com.lq.ren.many.calendar.view.jan_17.WorkingActionView;
+import com.lq.ren.many.calendar.view.jan_17.WorkingSlideView0206;
+import com.lq.ren.many.calendar.view.slide170206.TestSwipeActivity;
 import com.lq.ren.many.calendar.view.step5.RoundImage0905;
-import com.lq.ren.many.learn.course.Draw1208Ripple;
 import com.lq.ren.many.learn.course.Draw4Shader;
-import com.lq.ren.many.learn.course.DrawVector1213;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -115,7 +119,61 @@ public class CustomActivity extends Activity {
 //        setContentView(new Draw1208Ripple(this));
 
         //12.13
-        setContentView(new DrawVector1213(this));
+        //setContentView(new DrawVector1213(this));
+
+        //17.01.06
+//        setContentView(new PercentView0106(this));
+
+        //17.01.13
+//        RoundedSquareImage0113 imageView = new RoundedSquareImage0113(this);
+//        imageView.setCornerRadius(10);
+//        setContentView(imageView);
+//        //测试Home
+//        registerReceiver(mHomeKeyEventReceiver, new IntentFilter(
+//                Intent.ACTION_CLOSE_SYSTEM_DIALOGS));
+
+        //17.01.19
+//        setContentView(new CustomTrigon0119(this));
+
+        //17.01.24
+//        setContentView(new HeartRateView(this));
+
+        //17.02.06
+        //setContentView(R.layout.custom_scroller0205);
+        setContentView(new WorkingActionView(this));
+//        startActivity(new Intent(this, TestSwipeActivity.class));
+
+    }
+    //测试Home
+    private BroadcastReceiver mHomeKeyEventReceiver = new BroadcastReceiver() {
+        String SYSTEM_REASON = "reason";
+        String SYSTEM_HOME_KEY = "homekey";
+        String SYSTEM_HOME_KEY_LONG = "recentapps";
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals(Intent.ACTION_CLOSE_SYSTEM_DIALOGS)) {
+                String reason = intent.getStringExtra(SYSTEM_REASON);
+                if (TextUtils.equals(reason, SYSTEM_HOME_KEY)) {
+                    //表示按了home键,程序到了后台
+                    Toast.makeText(getApplicationContext(), "home", Toast.LENGTH_SHORT).show();
+                }else if(TextUtils.equals(reason, SYSTEM_HOME_KEY_LONG)){
+                    //表示长按home键,显示最近使用的程序列表
+                }
+            }
+        }
+    };
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e("HEHE", "onPause");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("HEHE", "onDestroy");
     }
 
     private void initListView() {

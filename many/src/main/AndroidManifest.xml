@@ -23,6 +23,7 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -34,6 +35,8 @@
         <activity android:name="com.lq.ren.many.learn.alarm.TimeSetActivity"/>
         <activity android:name="com.lq.ren.many.learn.alarm.AlarmActivity"/>
         <activity android:name=".calendar.indicator1019.GestureActivity"/>
+
+        <activity android:name=".calendar.view.slide170206.TestSwipeActivity"/>
 
         <!--<receiver
             android:name="com.he.custom.utils.Timesetting">
