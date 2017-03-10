@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -23,17 +22,11 @@ import android.widget.Toast;
 
 
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.lq.ren.many.calendar.compare170222.SpanTextView0227;
 import com.lq.ren.many.calendar.hashmapstep7.MapToFile0909String;
 import com.lq.ren.many.calendar.view.CombintionView;
 import com.lq.ren.many.calendar.view.ListDeleteAdapter;
 import com.lq.ren.many.calendar.view.ListDeleteView;
-import com.lq.ren.many.calendar.view.jan_17.CustomTrigon0119;
-import com.lq.ren.many.calendar.view.jan_17.HeartRateView;
-import com.lq.ren.many.calendar.view.jan_17.PercentView0106;
-import com.lq.ren.many.calendar.view.jan_17.RoundedSquareImage0113;
-import com.lq.ren.many.calendar.view.jan_17.WorkingActionView;
-import com.lq.ren.many.calendar.view.jan_17.WorkingSlideView0206;
-import com.lq.ren.many.calendar.view.slide170206.TestSwipeActivity;
 import com.lq.ren.many.calendar.view.step5.RoundImage0905;
 import com.lq.ren.many.learn.course.Draw4Shader;
 
@@ -61,7 +54,7 @@ public class CustomActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //setContentView(R.layout.custom_customview);
+//        setContentView(R.layout.custom_customview);
 
         //initListView();
 
@@ -140,9 +133,14 @@ public class CustomActivity extends Activity {
 
         //17.02.06
         //setContentView(R.layout.custom_scroller0205);
-        setContentView(new WorkingActionView(this));
+//        setContentView(new WorkingActionView(this));
 //        startActivity(new Intent(this, TestSwipeActivity.class));
 
+        //17.02.23
+//        setContentView(new ScrollText170223(this));
+
+        //17.02.27
+        setContentView(new SpanTextView0227(this));
     }
     //测试Home
     private BroadcastReceiver mHomeKeyEventReceiver = new BroadcastReceiver() {

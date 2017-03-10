@@ -2,15 +2,10 @@ package com.lq.ren.unit920;
 
 
 
-import android.util.Log;
-
-import com.lq.ren.many.calendar.compare170222.CompareUtil;
+import com.lq.ren.many.calendar.compare170222.CompareUtil0222;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.util.Locale;
 
@@ -20,7 +15,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 /**
  * Author lqren on 17/2/22.
  */
-@PrepareForTest({CompareUtil.class})
+@PrepareForTest({CompareUtil0222.class})
 public class CompareUtilTest {
 
     private static final CompareNameBuilder[] COMPARE_NAMES = {
@@ -42,7 +37,7 @@ public class CompareUtilTest {
         for (CompareNameBuilder nameBuilder : COMPARE_NAMES) {
             String result = String.format(Locale.US, "%s vs %s != %d",
                     nameBuilder.oldName, nameBuilder.newName, nameBuilder.result);
-            assertThat(result, CompareUtil.compareName(nameBuilder.oldName, nameBuilder.newName),
+            assertThat(result, CompareUtil0222.compareName(nameBuilder.oldName, nameBuilder.newName),
                         equalTo(nameBuilder.result));
         }
     }

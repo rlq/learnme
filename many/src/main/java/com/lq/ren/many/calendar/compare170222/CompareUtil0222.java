@@ -1,16 +1,14 @@
 package com.lq.ren.many.calendar.compare170222;
 
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Author lqren on 17/2/22.
+ * Author lqren on 17/2/23.
  */
-public class CompareUtil {
-
+public class CompareUtil0222 {
 
     // > 0 new ; < 0 old ; = 0 eq
     public static int compareName(@Nullable String name1, @Nullable String name2) {

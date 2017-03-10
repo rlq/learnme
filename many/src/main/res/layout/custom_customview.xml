@@ -76,5 +76,15 @@
         android:layout_height="300dp"/> -->
 
 
+    <!--170228 pullToRefresh-->
+    <com.lq.ren.many.calendar.compare170222.PullAndLoadListView0228
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="45dp"
+        android:divider="@null"
+        android:listSelector="@null"
+        android:scrollbars="none" />
 
 </LinearLayout>
