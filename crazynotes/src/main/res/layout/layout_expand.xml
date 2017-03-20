@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+        android:id="@+id/popMenu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_btn_height"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        android:text="popMenu"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent" />
+
+    <ExpandableListView
+        android:id="@+id/expandList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ExpandableListView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_btn_height"/>
+
+</LinearLayout>

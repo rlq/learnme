@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 指定:启动指定preferenceFragment的列表项 -->
+    <header android:fragment="com.lq.ren.crazynotes.act.PreferAct$Prefer1Fragment"
+        android:icon="@drawable/a"
+        android:title="背景灯光选项设置"
+        android:summary="设置sex的相关选项">
+    </header>
+
+    <!-- 指定:启动指定preferenceFragment的列表项 -->
+    <header android:fragment="com.lq.ren.crazynotes.act.PreferAct$Prefer2Fragment"
+        android:icon="@drawable/b"
+        android:title="人种选项设置"
+        android:summary="设置人种的相关选项">
+        <!-- 使用extra可向Activity传入额外的数据 -->
+        <extra android:name="website"
+            android:value="www.baidu.com"/>
+    </header>
+    <header
+        android:icon="@drawable/c"
+        android:title="使用Intent"
+        android:summary="使用Intent启动某个Activity">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="http://www.baidu.com"/>
+    </header>
+</preference-headers>

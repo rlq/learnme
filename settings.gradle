@@ -1,1 +1,1 @@
-include ':app', ':many', ':traigon170119'
+include ':app', ':many', ':traigon170119', ':crazynotes'

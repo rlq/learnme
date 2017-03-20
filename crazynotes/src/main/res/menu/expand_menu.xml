@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/logout_expand"
+        android:orderInCategory="0"
+        android:title="@string/logout_expand"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/open_prefer"
+        android:orderInCategory="1"
+        android:title="@string/open_prefer"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/settings"
+        android:title="@string/preferSum">
+        <menu>
+            <item
+                android:id="@+id/sounds"
+                android:orderInCategory="3"
+                app:showAsAction="never"
+                android:title="@string/sound"/>
+            <item
+                android:id="@+id/background"
+                android:orderInCategory="4"
+                app:showAsAction="never"
+                android:title="@string/background"/>
+        </menu>
+
+    </item>
+</menu>

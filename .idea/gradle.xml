@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/crazynotes" />
             <option value="$PROJECT_DIR$/many" />
             <option value="$PROJECT_DIR$/traigon170119" />
           </set>
