@@ -87,4 +87,10 @@
         android:listSelector="@null"
         android:scrollbars="none" />
 
+    <!--170323 floatButton rippleDrawable-->
+    <com.lq.ren.many.calendar.view.mar_17.FloatingButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:tic_rippleColor="@color/colorGreen"/>
+
 </LinearLayout>

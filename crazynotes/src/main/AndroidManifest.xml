@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lq.ren.crazynotes">
 
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS" />-->
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,8 +27,17 @@
         <activity android:name=".act.ExpandAct"
             android:label="@string/expandable"/>
 
-        <activity android:name=".act.PreferAct"
-            android:label="@string/prefer"/>
+        <activity android:name=".PreferAct"/>
+        <activity android:name=".tts0515.AudioTrackPlayer"/>
+        <activity android:name=".tts0515.AudioTrackActivity"/>
+
+        <receiver android:name=".SportGpsReceiver">
+            <intent-filter>
+                <action android:name="android.location.MODE_CHANGED" />
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

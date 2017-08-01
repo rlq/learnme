@@ -30,5 +30,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
     compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'org.greenrobot:greendao:3.2.0'
     compile "com.alibaba:fastjson:1.1.56.android"
+
 }

@@ -6,12 +6,14 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.ContentObserver;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.text.TextUtils;
 import android.util.Log;
@@ -22,8 +24,8 @@ import android.widget.Toast;
 
 
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.lq.ren.many.calendar.compare170222.SpanTextView0227;
 import com.lq.ren.many.calendar.hashmapstep7.MapToFile0909String;
+import com.lq.ren.crazynotes.tts0515.TTSOffPlayer;
 import com.lq.ren.many.calendar.view.CombintionView;
 import com.lq.ren.many.calendar.view.ListDeleteAdapter;
 import com.lq.ren.many.calendar.view.ListDeleteView;
@@ -54,7 +56,7 @@ public class CustomActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        setContentView(R.layout.custom_customview);
+        setContentView(R.layout.custom_customview);
 
         //initListView();
 
@@ -62,7 +64,7 @@ public class CustomActivity extends Activity {
         //initDrawView();
 
         /** gps*/
-        //testGps();
+        testGps();
 
         /**0905 RoundView 圆角 */
         //step5SetRoundDrawable();
@@ -140,8 +142,9 @@ public class CustomActivity extends Activity {
 //        setContentView(new ScrollText170223(this));
 
         //17.02.27
-        setContentView(new SpanTextView0227(this));
+//        setContentView(new SpanTextView0227(this));
     }
+
     //测试Home
     private BroadcastReceiver mHomeKeyEventReceiver = new BroadcastReceiver() {
         String SYSTEM_REASON = "reason";
@@ -259,6 +262,35 @@ public class CustomActivity extends Activity {
         //mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10, 100, mListener);
     }
 
+    private final ContentObserver mGpsMonitor = new ContentObserver(null) {
+        @Override
+        public void onChange(boolean selfChange) {
+            super.onChange(selfChange);
+
+            boolean enabled = mLocationManager
+                    .isProviderEnabled(LocationManager.GPS_PROVIDER);
+            Log.e("HEHE", "gps enabled? " + enabled);
+        }
+    };
+
+    private LocationManager mLocationManager;
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        getContentResolver()
+                .registerContentObserver(
+                        Settings.Secure
+                                .getUriFor(Settings.System.LOCATION_PROVIDERS_ALLOWED),
+                        false, mGpsMonitor);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        getContentResolver().unregisterContentObserver(mGpsMonitor);
+    }
 
     private LocationListener mListener = new LocationListener() {
         @Override

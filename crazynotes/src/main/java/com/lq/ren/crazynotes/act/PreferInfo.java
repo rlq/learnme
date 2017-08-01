@@ -49,7 +49,7 @@ public class PreferInfo implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeInt(status);
-        parcel.writeTypedArray(data, i);
+//        parcel.writeTypedArray(data, i);
     }
 
 

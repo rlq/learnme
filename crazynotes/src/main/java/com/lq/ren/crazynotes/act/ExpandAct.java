@@ -101,8 +101,8 @@ public class ExpandAct extends AppCompatActivity implements PopupMenu.OnMenuItem
                 finish();
                 break;
             case R.id.open_prefer:
-                startActivity(new Intent(ExpandAct.this, PreferAct.class));
-                finish();
+//                startActivity(new Intent(ExpandAct.this, PreferAct.class));
+//                finish();
                 break;
             case R.id.background:
             case R.id.sounds:
