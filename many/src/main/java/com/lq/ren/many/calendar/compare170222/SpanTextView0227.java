@@ -43,7 +43,8 @@ public class SpanTextView0227 extends LinearLayout {
         LayoutInflater inflater = LayoutInflater.from(getContext());
         inflater.inflate(R.layout.custom_170227_text_view, this, true);
 
-     /*   TextView textWithString = (TextView) findViewById(R.id.text_view_font_1);
+     /*
+       TextView textWithString = (TextView) findViewById(R.id.text_view_font_1);
         String w = "The quick fox jumps over the lazy dog";
         int start = w.indexOf('q');
         int end = w.indexOf('k') + 1;
@@ -55,7 +56,7 @@ public class SpanTextView0227 extends LinearLayout {
         word.setSpan(new BackgroundColorSpan(Color.RED), start, end,
                 Spannable.SPAN_INCLUSIVE_INCLUSIVE);
         textWithString.setText(word);
-*/
+    */
         // Demonstration of basic SpannableStringBuilder and spans usage
         final TextView textWithBuilder = (TextView) findViewById(R.id.text_view_font_1);
         SpannableStringBuilder word2 = new SpannableStringBuilder();
@@ -140,9 +141,5 @@ public class SpanTextView0227 extends LinearLayout {
         textClickable.setText(contact);
 
     }
-
-
-
-
 
 }

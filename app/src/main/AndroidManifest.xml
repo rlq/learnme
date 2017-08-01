@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".tts1201.TTS121Activity"/>
+        <activity android:name="com.lq.ren.crazynotes.tts0515.TTS121Activity"/>
         <activity android:name=".d3.TextDomeActivity"/>
     </application>
 

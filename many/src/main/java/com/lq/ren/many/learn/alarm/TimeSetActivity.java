@@ -22,7 +22,6 @@ public class TimeSetActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.e("HEHE", "time oncreate");
         setContentView(R.layout.custom_setalarm);
 
         mTimePicker = (TimePicker) findViewById(R.id.tp_set_alarm_add);
@@ -41,7 +40,6 @@ public class TimeSetActivity extends Activity {
         Intent i = new Intent(this, CustomActivity.class);
         i.putExtra("Minute", mMinute);
         i.putExtra("Hour", mHours);
-        Log.v("HEHE", "hour "+ mHours + "  minute "+ mMinute);
 
         setResult(Activity.RESULT_OK, i);
         finish();

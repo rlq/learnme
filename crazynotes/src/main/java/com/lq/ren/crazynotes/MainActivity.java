@@ -16,7 +16,6 @@ import android.widget.ArrayAdapter;
 
 import com.lq.ren.crazynotes.act.ExpandAct;
 import com.lq.ren.crazynotes.tts0515.AudioTrackActivity;
-import com.lq.ren.crazynotes.tts0515.AudioTrackPlayer;
 import com.lq.ren.crazynotes.tts0515.TTSOffPlayer;
 
 /**
@@ -29,7 +28,7 @@ import com.lq.ren.crazynotes.tts0515.TTSOffPlayer;
 
 public class MainActivity extends LauncherActivity implements SensorEventListener {
 
-    private Class<?>[] classNames = {PreferAct.class, ExpandAct.class, AudioTrackActivity.class};//AudioTrackPlayer.class};
+    private Class<?>[] classNames = {PreferAct.class, ExpandAct.class, AudioTrackActivity.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

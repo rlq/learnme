@@ -26,7 +26,7 @@ public class CircularProgressView extends View {
     private static final int sDividerAngle = 2;
     private float mCurrentProgress;
     private int mThickness, mColor;
-    private int mBgColor = Color.parseColor("#12FFFFFF");
+    private int mBgColor = getResources().getColor(R.color.colorAccent);
 
     private float mActualProgress;
     private ValueAnimator mProgressAnimator;

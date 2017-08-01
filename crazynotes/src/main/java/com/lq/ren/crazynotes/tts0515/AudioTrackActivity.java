@@ -19,6 +19,7 @@ import javazoom.jl.decoder.SampleBuffer;
 
 /**
  * Author lqren on 17/5/24.
+ * new Thread
  */
 
 public class AudioTrackActivity extends Activity {

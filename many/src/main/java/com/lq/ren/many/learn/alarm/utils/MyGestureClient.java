@@ -39,7 +39,7 @@ public class MyGestureClient {
         return context.startService(intent) != null;
     }
 
-    public static boolean stioService(Context context){
+    public static boolean stopService(Context context){
         Intent intent = new Intent(ACTION_GESTURE_SERVICE);
         intent.setPackage(SERVICE_PACKAGE);
         intent = createExplicitFromImplicitIntent(context, intent);

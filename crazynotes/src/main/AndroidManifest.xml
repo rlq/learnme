@@ -28,7 +28,6 @@
             android:label="@string/expandable"/>
 
         <activity android:name=".PreferAct"/>
-        <activity android:name=".tts0515.AudioTrackPlayer"/>
         <activity android:name=".tts0515.AudioTrackActivity"/>
 
         <receiver android:name=".SportGpsReceiver">

@@ -59,7 +59,7 @@ public class ActionView extends RelativeLayout implements View.OnClickListener {
 
                 }
                 if (e1.getX() - e2.getX() < -80) {
-                        Log.e("HEHE", " < -120");
+                    Log.e("HEHE", " < -120");
                 }
                 return false;
             }

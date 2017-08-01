@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class MapToFile0909String {
 
     /**
-     * 以下是9.7写的一个测试, 因为目前9.9 String 为key时还是会有重复,现在做测试///////////////
+     * 以下是9.7写的一个测试, 因为目前9.9 String 为key时还是会有重复,现在做测试
      */
 
     private static File mFile ;
@@ -161,13 +161,5 @@ public class MapToFile0909String {
         }
         return beans;
     }
-
-//    private MapToFileBean getALarm() {
-//        MapToFileBean alarm = new MapToFileBean();
-//        alarm.setId(id);
-//        alarm.setTime(time);
-//        Log.e("HEHE", "id: "+ id + ", time :" + time);
-//        return alarm;
-//    }
-
+    
 }

@@ -16,7 +16,6 @@ public class RingAlarmActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.custom_ringalarm);
     }
 
@@ -26,7 +25,7 @@ public class RingAlarmActivity extends Activity {
 
     public void close(View view){
         //TODO canel alarm
-        AlarmUtils.canelAlarmTime(this,"", 100000);
+        AlarmUtils.cancelAlarmTime(this,"", 100000);
         finish();
     }
 }

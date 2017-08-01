@@ -13,10 +13,8 @@ import android.util.Log;
 import android.view.View;
 
 /**
-	 * 自定义空间，带圆角的柱状体
-	 * @author DuGuang
-	 *
-	 */
+ * 自定义空间，带圆角的柱状体
+ */
 public class CustomRect extends View {
 
 		//圆角柱状体4个角的值

@@ -8,21 +8,22 @@ import android.util.Log;
  */
 public class BaseReceiver extends MesReceiver {
 
+    private static final String TAG = "HEHE";
 
     @Override
-    public void onCompanionConnected(Context context) {
-        Log.e("HEHE", "与companion 已连接");
+    public void onConnected(Context context) {
+        Log.d(TAG, "connected");
     }
 
     @Override
-    public void onCompanionDisconnected(Context context) {
-        Log.e("HEHE", "与companion 已断开连接");
+    public void onDisconnected(Context context) {
+        Log.d(TAG, "disconnected");
     }
 
     @Override
     public void onMessageReceived(Context context, String path, byte[] data) {
-        if (path.startsWith("3")) {
-            Log.e("HEHE", "请求已接收, 处理data");
+        if (path.startsWith(ACTION_MSG_RECEIVED_PATH)) {
+            Log.d(TAG, "msg received, handle data");
         }
     }
 }

@@ -17,7 +17,6 @@ import java.sql.Time;
 
 /**
  * Created by lqren on 16/8/31.
- * 一个表盘的自定义, 从上到下的顺序阅读,也是作者自定义的思路
  */
 public class AnalogClock extends View {
 
@@ -284,12 +283,12 @@ public class AnalogClock extends View {
         int w = drawable.getIntrinsicWidth();
         int h = drawable.getIntrinsicHeight();
         /** 仔细体会这里设置的Bounds，我们所画出的矩形，
-                同样是以(x,y)为中心的
-                矩形，时针图片放入该矩形后，时针的根部刚好在点(x,y)处，
-                因为我们之前做时针图片时，
-                已经让图片中的时针根部在图片的中心位置了，
-                虽然，看起来浪费了一部分图片空间（就是时针下半部分是空白的），
-                但却换来了建模的简单性，还是很值的。*/
+        同样是以(x,y)为中心的
+        矩形，时针图片放入该矩形后，时针的根部刚好在点(x,y)处，
+        因为我们之前做时针图片时，
+        已经让图片中的时针根部在图片的中心位置了，
+        虽然，看起来浪费了一部分图片空间（就是时针下半部分是空白的），
+        但却换来了建模的简单性，还是很值的。*/
 
         drawable.setBounds(x - (w / 2), y - (h / 2), x + (w / 2), y + (h / 2));
     }

@@ -39,7 +39,7 @@
         <activity android:name=".calendar.view.slide170206.TestSwipeActivity"/>
 
         <!--<receiver
-            android:name="com.he.custom.utils.Timesetting">
+            android:name="com.he.custom.utils.TimeSetting">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />

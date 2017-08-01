@@ -17,32 +17,28 @@ import java.util.Calendar;
 public class AlarmUtils {
 
     public static void setAlarmTime(Context context, Calendar calendar){
-        long timeInMIllis = calendar.getTimeInMillis();
+        long time = calendar.getTimeInMillis();
         Intent intent = CallAlarm.createAlarmReceiverIntent(context, 10000);
         AlarmManager manager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         PendingIntent pending = PendingIntent.getBroadcast(context,
                 intent.getIntExtra("id", 0),
                 intent, PendingIntent.FLAG_CANCEL_CURRENT);
-        if(Build.VERSION.SDK_INT>=19)
-        {
-            manager.setExact(AlarmManager.RTC_WAKEUP, timeInMIllis , pending);
-        }else{
-            manager.set(AlarmManager.RTC_WAKEUP, timeInMIllis , pending);
+        
+        if (Build.VERSION.SDK_INT >= 19) {
+            manager.setExact(AlarmManager.RTC_WAKEUP, time , pending);
+        } else {
+            manager.set(AlarmManager.RTC_WAKEUP, time , pending);
         }
 
 
     }
 
-    public static void canelAlarmTime(Context context, String action,
-                                      int id){
+    public static void cancelAlarmTime(Context context, String action, int id){
         Intent intent = new Intent(action);
         PendingIntent pi = PendingIntent.getBroadcast(context, id, intent,
                 PendingIntent.FLAG_CANCEL_CURRENT);
         AlarmManager manager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         manager.cancel(pi);
-    }
-
-    public void codeStyle(){
     }
 
 }

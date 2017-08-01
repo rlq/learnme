@@ -12,8 +12,6 @@ import android.view.View;
 
 /**
  * 自定义控件圆形
- * @author DuGuang
- *
  */
 public class CustomCircle extends View {
 

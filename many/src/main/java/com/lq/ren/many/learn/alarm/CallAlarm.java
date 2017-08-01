@@ -9,22 +9,20 @@ import android.util.Log;
  * Created by lqren on 16/7/22.
  */
 public class CallAlarm extends BroadcastReceiver {
+
     public static final String ALARM_RECEIVE_ACTION = "alarm_receive";
 
     @Override
     public void onReceive(Context context, Intent intent) {
         final String action = intent.getAction();
-        Log.i("HEHE", "call alarm");
-
-
 
         if(action != null && action.equals(ALARM_RECEIVE_ACTION)){
             Intent i = new Intent(context, RingAlarmActivity.class);
             i.setData(intent.getData()).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
         }
+
         Intent i= new Intent(context,AlarmActivity.class);
-        //默认的跳转类型,将Activity放到一个新的Task中
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(i);
     }

@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 /**
  * Created by lqren on 16/7/30.
- * 点击闹钟后各种情况, 有闹钟 还是没有闹钟等, 还是设置时间
+ * click alarm, handle a lot of cases.
  */
 public class HandlerApiActivity extends Activity {
 

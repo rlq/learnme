@@ -13,9 +13,7 @@ import android.widget.TextView;
 
 /**
  * 主页面
- * @author DuGuang
  * blog地址：http://blog.csdn.net/duguang77
- *
  */
 public class MainActivity extends Activity {
 

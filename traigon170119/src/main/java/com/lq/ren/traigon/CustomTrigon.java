@@ -12,7 +12,6 @@ import android.view.View;
 
 /**
  * 通过柱状体顶部中心点坐标和圆心点坐标，画出过圆心的三角形
- * @author DuGuang
  * blog地址：http://blog.csdn.net/duguang77
  */
 public class CustomTrigon extends View {

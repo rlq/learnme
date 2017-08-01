@@ -1,4 +1,4 @@
-package com.lq.ren.crazynotes.utils;
+package com.lq.ren.many.learn.utils;
 
 import android.app.Activity;
 import android.content.Intent;

@@ -8,5 +8,4 @@ public class Detail {
     public int id;
     public String name;
 
-
 }
