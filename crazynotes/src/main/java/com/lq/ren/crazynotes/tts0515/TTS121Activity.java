@@ -8,7 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.he.learnme.R;
+
+import com.lq.ren.crazynotes.R;
 
 import java.util.Locale;
 

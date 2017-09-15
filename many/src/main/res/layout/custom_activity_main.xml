@@ -13,10 +13,9 @@
         android:id="@+id/addAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        android:background="@drawable/ic_add_normal_1212"
         android:text="addAlarm"
-        android:onClick="setTime"
-        android:layout_alignParentStart="true" />
+        />
 
     <include
         layout="@layout/custom_alarmitem"/>
